@@ -52,6 +52,10 @@ public class Visit extends BaseEntity {
 	@Column(name = "description")
 	private String description;
 
+
+	@ManyToOne(optional = true)
+	private RecoveryRoom recoveryRoom;
+
 	/**
 	 * Holds value of property pet.
 	 */
@@ -115,12 +119,11 @@ public class Visit extends BaseEntity {
 	}
 
 	public RecoveryRoom getRecoveryRoom() {
-		// To be implemented
-		return null;
+		return this.recoveryRoom;
 	}
 
 	public void setRecoveryRoom(RecoveryRoom room) {
-		// To be implemented
+		this.recoveryRoom = room;
 	}
 
 }
