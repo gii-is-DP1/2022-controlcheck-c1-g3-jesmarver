@@ -60,5 +60,18 @@ INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (13, 'Sly', '2012-0
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (1, 7, '2013-01-01', 'rabies shot');
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (2, 8, '2013-01-02', 'rabies shot');
 INSERT INTO visits(id,pet_id,visit_date,description) VALUES (3, 8, '2013-01-03', 'neutered');
-INSERT INTO visits(id,pet_id,visit_date,description) VALUES (4, 7, '2013-01-04', 'spayed');
 
+
+
+INSERT INTO RECOVERY_ROOM_TYPE(name) VALUES 
+    ('room'),
+    ('box');
+    
+INSERT INTO RECOVERY_ROOM(name, secure, size, ROOM_TYPE_ID) VALUES 
+    ('Big room for dangerous animals', 1, 6.50, 1),
+    ('Medium box', 0, 1.50, 2);
+
+
+
+
+INSERT INTO visits(id,pet_id,visit_date,description, RECOVERY_ROOM_ID  ) VALUES (4, 7, '2013-01-04', 'spayed', 1);
